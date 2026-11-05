@@ -166,6 +166,21 @@ footer {
       <source src="my sweetie.mp3" type="audio/mpeg">
       Browser kamu tidak mendukung audio.
     </audio>
+
+    <audio controls loop>
+      <source src="beauty and a beat.mp3" type="audio/mpeg">
+      Browser kamu tidak mendukung audio.
+    </audio>
+
+    <audio controls loop>
+      <source src="as it was.mp3" type="audio/mpeg">
+      Browser kamu tidak mendukung audio.
+    </audio>
+
+    <audio controls loop>
+      <source src="payphone.mp3" type="audio/mpeg">
+      Browser kamu tidak mendukung audio.
+    </audio>
   </section>
 
   <!-- MOBILE LEGENDS -->
