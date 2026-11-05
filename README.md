@@ -153,7 +153,7 @@ footer {
 
   <!-- MUSIK -->
   <section class="card">
-    <h2>one direction 18</h2>
+    <h2>top my song</h2>
 
     <p>Dengarkan lagu favoritku di sini 🎵</p>
 
