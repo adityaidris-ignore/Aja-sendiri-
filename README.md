@@ -235,5 +235,4 @@ function playSong(index) {
 }
 </script>
 
-</body>
-</html>
+
