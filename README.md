@@ -201,7 +201,8 @@ footer {
 <section class="card">
   <h2>My hero mlbb</h2>
 
-  <video controls width="100%" 
+  <video autoplay muted loop playsinline
+         width="100%"
          style="max-width:500px; border-radius:12px;">
     <source src="sun starlight.mp4" type="video/mp4">
     Browser kamu tidak mendukung video.
