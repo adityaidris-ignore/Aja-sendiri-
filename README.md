@@ -179,7 +179,6 @@ footer {
 
     <audio controls loop>
       <source src="payphone.mp3" type="audio/mpeg">
-      Browser kamu tidak mendukung audio.
     </audio>
   </section>
 
