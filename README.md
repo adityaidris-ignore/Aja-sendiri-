@@ -197,21 +197,25 @@ footer {
     </p>
   </section>
 
-<!-- VIDEO MP4 -->
+<!-- VIDEO MP4 OTOMATIS -->
 <section class="card">
-  <h2>My hero mlbb</h2>
+  <h2>My Favorite Video</h2>
 
   <video autoplay muted loop playsinline
          width="100%"
          style="max-width:500px; border-radius:12px;">
+
     <source src="sun starlight.mp4" type="video/mp4">
+
     Browser kamu tidak mendukung video.
   </video>
 
+  </div>
+
+  </section>
+
+  <p>Video anime favoritku 🎬</p>
 </section>
-
-</div>
-
 <footer>
   <p>© 2026 My Personal Website</p>
   <p>Made with ❤️ by Nama Kamu</p>
