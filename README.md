@@ -1,37 +1,44 @@
+
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Profile</title>
+<title>Website Pribadi Anime</title>
 
 <style>
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
+  margin: 0;
   background: #101010;
   color: white;
   font-family: Arial, sans-serif;
 }
 
 header {
+  background: #202020;
+  padding: 20px;
   text-align: center;
-  padding: 35px 15px;
-  background: #1b1b1b;
   border-bottom: 2px solid #555;
 }
 
 header h1 {
-  color: #ccc;
-  font-size: 30px;
+  color: #aaa;
+  margin: 0;
 }
 
-header p {
-  color: #aaa;
-  margin-top: 10px;
+nav {
+  text-align: center;
+  padding: 15px;
+  background: #181818;
+}
+
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
 }
 
 .container {
@@ -41,74 +48,60 @@ header p {
 }
 
 .card {
-  background: #1b1b1b;
-  border: 1px solid #383838;
-  border-radius: 15px;
+  background: #1c1c1c;
   padding: 20px;
   margin-bottom: 20px;
-  text-align: center;
+  border-radius: 12px;
+  border: 1px solid #383838;
 }
 
 h2 {
-  color: #ddd;
-  margin-bottom: 15px;
+  color: #ccc;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
 }
 
-p {
-  color: #bbb;
-  line-height: 1.7;
-}
-
-img {
-  max-width: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.profile-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  border: 3px solid #777;
-  margin-bottom: 15px;
-}
-
-.waifu-img {
+img, video {
   width: 100%;
-  max-width: 350px;
-  max-height: 400px;
-  margin-bottom: 15px;
+  border-radius: 10px;
 }
 
-.hero-img {
-  width: 100%;
-  max-width: 350px;
-  margin-bottom: 15px;
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 
-audio {
-  width: 100%;
-  margin-top: 15px;
+.song {
+  background: #292929;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
 }
 
 button {
-  background: #444;
+  background: #555;
   color: white;
-  border: 1px solid #777;
-  padding: 12px 22px;
+  border: none;
+  padding: 10px 15px;
   border-radius: 8px;
   cursor: pointer;
-  margin-top: 15px;
 }
 
 button:hover {
-  background: #666;
+  background: #777;
 }
 
 footer {
   text-align: center;
-  padding: 25px;
-  color: #777;
+  padding: 20px;
+  color: #888;
+}
+
+@media(max-width:600px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
@@ -116,110 +109,131 @@ footer {
 <body>
 
 <header>
-  <h1>MY LITTLE WEBSITE</h1>
-  <p>Welcome to my anime world</p>
+  <h1>MY WEBSITE</h1>
+  <p>Welcome to my personal website</p>
 </header>
+
+<nav>
+  <a href="#profil">Profil</a>
+  <a href="#musik">Musik</a>
+  <a href="#waifu">Waifu</a>
+  <a href="#game">Game</a>
+</nav>
 
 <div class="container">
 
-  <!-- DATA DIRI -->
-  <section class="card">
-    <h2>About Me</h2>
+  <!-- PROFIL -->
+  <section class="card" id="profil">
+    <h2>👤 Tentang Saya</h2>
 
     <img src="yinix.jpg"
          alt="Foto saya"
-         class="profile-img">
+         style="max-width:200px">
 
     <p>Nama: Aditya idris</p>
-    <p>Umur: 17 tahun</p>
-    <p>Hobi: Gaming, Anime, dan Musik</p>
+    <p>Hobi: Anime, Gaming, dan Musik</p>
     <p>Game Favorit: Mobile Legends</p>
-    <p>Waifu: Sistine Fibel</p>
   </section>
 
-  <!-- WAIFU -->
+  <!-- VIDEO OTOMATIS -->
   <section class="card">
-    <h2>My Waifu</h2>
+    <h2>🎬 Video Favorit</h2>
 
-    <img src="waifu gua.jpg"
-         alt="Foto waifu"
-         class="waifu-img">
+    <video autoplay muted loop playsinline controls>
+      <source src="sun starlight.mp4" type="video/mp4">
+      Browser tidak mendukung video.
+    </video>
 
-    <h3>Sistine Fibel</h3>
-    <p>My favorite anime character ❤️</p>
+    <p>Video akan diputar otomatis tanpa suara.</p>
   </section>
 
   <!-- MUSIK -->
-  <section class="card">
-    <h2>top my song</h2>
+  <section class="card" id="musik">
+    <h2>🎵 Music Player</h2>
 
-    <p>Dengarkan lagu favoritku di sini 🎵</p>
+    <p>♫ Pilih lagu favoritmu</p>
 
-    <audio controls loop>
-      <source src="18.mp3" type="audio/mpeg">
-      Browser kamu tidak mendukung audio.
-    </audio>
+    <div class="song">
+      <p>🎵 Lagu 1 - one direction 18</p>
+      <button onclick="playSong(0)">▶ Putar</button>
+    </div>
 
-    <audio controls loop>
-      <source src="my sweetie.mp3" type="audio/mpeg">
-      Browser kamu tidak mendukung audio.
-    </audio>
+    <div class="song">
+      <p>🎵 Lagu 2 - my sweetie</p>
+      <button onclick="playSong(1)">▶ Putar</button>
+    </div>
 
-    <audio controls loop>
-      <source src="beauty and a beat.mp3" type="audio/mpeg">
-      Browser kamu tidak mendukung audio.
-    </audio>
+    <div class="song">
+      <p>🎵 Lagu 3 - beauty and a beat</p>
+      <button onclick="playSong(2)">▶ Putar</button>
+    </div>
 
-    <audio controls loop>
-      <source src="as it was.mp3" type="audio/mpeg">
-      Browser kamu tidak mendukung audio.
-    </audio>
+    <div class="song">
+      <p>🎵 Lagu 4 - as it was</p>
+      <button onclick="playSong(3)">▶ Putar</button>
+    </div>
 
-    <audio controls loop>
-      <source src="payphone.mp3" type="audio/mpeg">
-    </audio>
+    <div class="song">
+      <p>🎵 Lagu 5 - payphone</p>
+      <button onclick="playSong(4)">▶ Putar</button>
+    </div>
+
+    <audio id="music" controls style="width:100%"></audio>
+
+    <p id="status">Belum ada lagu yang diputar.</p>
   </section>
 
-  <!-- MOBILE LEGENDS -->
-  <section class="card">
-    <h2>Mobile Legends</h2>
+  <!-- WAIFU -->
+  <section class="card" id="waifu">
+    <h2>💖 My Waifu</h2>
 
-    <img src="sun.jpg"
-         alt="Hero Mobile Legends favorit"
-         class="hero-img">
+    <img src="waifu gua.jpg" alt="Foto waifu">
 
-    <h3>Hero Favorit: Sun</h3>
-
-    <p>
-      Game favoritku adalah Mobile Legends.
-      Aku suka bermain bersama teman dan
-      menggunakan hero favoritku.
-    </p>
+    <p>Waifu favoritku adalah karakter anime yang gua sukai karena dia tsundere,imut dan perhatian.</p>
   </section>
 
-<!-- VIDEO MP4 OTOMATIS -->
-<section class="card">
-  <h2>My Favorite Video</h2>
+  <!-- GAME -->
+  <section class="card" id="888">
+    <h2>🎮 Mobile Legends</h2>
 
-  <video autoplay muted loop playsinline
-         width="100%"
-         style="max-width:500px; border-radius:12px;">
+    <p>Game favorit dan hero andalanku.</p>
 
-    <source src="sun starlight.mp4" type="video/mp4">
+    <div class="hero">
 
-    Browser kamu tidak mendukung video.
-  </video>
+      <div>
+        <img src="sun.jpg" alt="Hero favorit">
+        <h3>Hero Favorit 1</h3>
+      </div>
 
-  </div>
-
+    </div>
   </section>
 
-  <p>Video anime favoritku 🎬</p>
-</section>
+</div>
+
 <footer>
-  <p>© 2026 My Personal Website</p>
-  <p>Made with ❤️ by Nama Kamu</p>
+  <p>© 2026 My Anime Website</p>
 </footer>
+
+<script>
+const songs = [
+  "18.mp3",
+  "my sweetie.mp3",
+  "beauty and a beat.mp3",
+  "as it was.mp3",
+  "payphone.mp3"
+];
+
+const music = document.getElementById("music");
+const status = document.getElementById("status");
+
+function playSong(index) {
+  music.src = songs[index];
+  music.play();
+
+  status.textContent =
+    "Sedang memutar Lagu " + (index + 1);
+}
+</script>
 
 </body>
 </html>
