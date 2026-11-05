@@ -163,6 +163,18 @@ footer {
     </audio>
   </section>
 
+  <!-- MUSIK -->
+  <section class="card">
+    <h2>my sweetie</h2>
+
+    <p>Dengarkan lagu favoritku di sini 🎵</p>
+
+    <audio controls loop>
+      <source src="my sweetie.mp3" type="audio/mpeg">
+      Browser kamu tidak mendukung audio.
+    </audio>
+  </section>
+
   <!-- MOBILE LEGENDS -->
   <section class="card">
     <h2>Mobile Legends</h2>
