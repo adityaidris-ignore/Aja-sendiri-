@@ -177,7 +177,12 @@ footer {
       <p>🎵 Lagu 5 - payphone</p>
       <button onclick="playSong(4)">▶ Putar</button>
     </div>
-
+     
+     <div class="song">
+      <p>🎵 Lagu 6 - yoi</p>
+      <button onclick="playSong(4)">▶ Putar</button>
+    </div>
+    
     <audio id="music" controls style="width:100%"></audio>
 
     <p id="status">Belum ada lagu yang diputar.</p>
